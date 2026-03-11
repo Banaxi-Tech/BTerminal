@@ -1,0 +1,23 @@
+pkgname=bterminal
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="GTK4/VTE terminal emulator"
+arch=('x86_64')
+url="https://github.com/Banaxi-Tech/bterminal"
+license=('MIT')
+depends=('gtk4' 'vte4' 'zsh')
+makedepends=('cmake' 'pkg-config')
+source=()
+sha256sums=()
+
+build() {
+  cd "${srcdir}/${pkgname}"
+  cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+  cmake --build build
+}
+
+package() {
+  cd "${srcdir}/${pkgname}"
+  DESTDIR="${pkgdir}" cmake --install build
+}
+

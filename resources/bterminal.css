@@ -1,0 +1,19 @@
+window {
+  background-color: #1e1e2e;
+}
+
+.terminal-window {
+  background-color: #1e1e2e;
+  border-radius: 10px;
+}
+
+.header-bar {
+  background-color: #181825;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+notebook tab {
+  background-color: #313244;
+  color: #CDD6F4;
+}
+
